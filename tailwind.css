@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flash {
+  @apply border bg-slate-200 mb-4 mx-4 p-4 ;
+}
+
+.flash--error {
+  @apply border-red-400 bg-red-200 text-red-700 ;
+}
+
+.flash--success {
+  @apply border-green-400 bg-green-200 text-green-700;
+}

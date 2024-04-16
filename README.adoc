@@ -1,0 +1,45 @@
+= Download UI
+
+A simple web service to download files using `gallery-dl`.
+
+== Get started
+
+Coming soon.
+
+== Development
+
+Python environment setup:
+
+[source,shell]
+----
+py -m venv .venv
+.venv/Scripts/activate
+pip install flask
+----
+
+Node environment setup:
+
+[source,shell]
+----
+npm install
+----
+
+Start development server:
+
+[source,shell]
+----
+flask --app download-ui run --debug
+----
+
+Start Tailwind CSS compiler:
+
+[source,shell]
+----
+npx tailwindcss -i ./tailwind.css -o ./download-ui/static/css/tailwind.css --watch
+----
+
+[NOTE]
+====
+`download-ui/static/css/tailwind.css` is committed into the repo to avoid including node.js in the
+build toolchain.
+====

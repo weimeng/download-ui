@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/tailwind.css')}}">
+  </head>
+
+  <body>
+    <div class="content text-center">
+      <h1 class="text-3xl my-3">Download UI</h1>
+
+      {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+          <ul>
+          {% for category, message in messages %}
+            <li class="flash flash--{{ category }}">{{ message }}</li>
+          {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+
+      <form method="post" action="/downloads">
+        <div>
+          <input
+            type="text" name="url" id="url" required
+            class="border p-2 mb-3 text-2xl w-96"
+          />
+        </div>
+
+        <button class="bg-slate-700 px-4 py-2 rounded text-white">Download</button>
+      </form>
+    </div>
+  </body>
+</html>
